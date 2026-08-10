@@ -1769,3 +1769,761 @@ header {
     transform: translateY(-2px);
 
 }
+
+/* =========================================
+   FINAL MOBILE RESPONSIVE FIX
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    /* =========================
+       GLOBAL
+       ========================= */
+
+    html {
+        overflow-x: hidden;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        font-size: 14px;
+    }
+
+    section {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+
+    /* =========================
+       MOBILE FIXED NAVBAR
+       ========================= */
+
+    header {
+        position: fixed !important;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 64px;
+
+        z-index: 9999;
+
+        background: rgba(8, 8, 8, 0.94);
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        border-bottom: 1px solid #1f1f1f;
+
+        overflow: hidden;
+    }
+
+    .navbar {
+        width: 100%;
+        height: 64px;
+
+        display: flex;
+        align-items: center;
+
+        padding: 0 16px;
+
+        gap: 20px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        white-space: nowrap;
+
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Hide scrollbar on Chrome / Safari */
+    .navbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Logo stays visible */
+    .logo {
+        flex: 0 0 auto;
+
+        font-size: 20px;
+
+        white-space: nowrap;
+    }
+
+    /* Navigation stays in one horizontal row */
+    .nav-links {
+        flex: 0 0 auto;
+
+        display: flex;
+        align-items: center;
+
+        gap: 22px;
+
+        white-space: nowrap;
+    }
+
+    .nav-links a {
+        flex: 0 0 auto;
+
+        font-size: 12px;
+
+        white-space: nowrap;
+    }
+
+    /* Resume stays at the end */
+    .nav-resume {
+        flex: 0 0 auto;
+
+        padding: 8px 12px;
+
+        font-size: 11px;
+
+        white-space: nowrap;
+    }
+
+    /* Prevent page itself from horizontal scrolling */
+    body {
+        padding-top: 64px;
+
+        overflow-x: hidden;
+    }
+
+
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .hero {
+        min-height: auto;
+
+        width: 100%;
+
+        padding: 80px 18px 70px;
+
+        gap: 35px;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 12vw, 52px);
+        line-height: 1;
+        letter-spacing: -2px;
+
+        word-break: normal;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 1.7;
+
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       BUTTONS
+       ========================= */
+
+    .buttons {
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    .btn,
+    .btn-outline {
+        padding: 11px 18px;
+
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       SECTION HEADINGS
+       ========================= */
+
+    .section-title {
+        font-size: 32px;
+        line-height: 1.15;
+
+        margin-bottom: 25px;
+    }
+
+    .section-label {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .section-description {
+        font-size: 13px;
+        line-height: 1.7;
+
+        margin-top: -10px;
+        margin-bottom: 30px;
+
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       PROJECTS
+       ========================= */
+
+    .project-container {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 220px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-content h3 {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .project-content p {
+        font-size: 13px;
+        line-height: 1.7;
+
+        max-width: 100%;
+    }
+
+    .project-links {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+
+    /* =========================
+       ABOUT
+       ========================= */
+
+    .about-container {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .about-heading h2 {
+        font-size: 32px;
+        line-height: 1.15;
+    }
+
+    .about-content p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+
+    /* =========================
+       SKILLS
+       ========================= */
+
+    .skills-container {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 30px;
+    }
+
+    .skill-group {
+        padding: 20px;
+    }
+
+    .skill-group h3 {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+
+    .skill-list {
+        gap: 6px;
+    }
+
+    .skill-list span {
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       EXPERIENCE
+       ========================= */
+
+    .experience-list {
+        width: 100%;
+
+        margin-top: 30px;
+    }
+
+    .experience-item {
+        padding: 25px 0;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .experience-header h3 {
+        font-size: 19px;
+    }
+
+    .experience-company {
+        font-size: 13px;
+    }
+
+    .experience-date {
+        font-size: 12px;
+    }
+
+    .experience-description {
+        font-size: 13px;
+        line-height: 1.7;
+
+        margin: 15px 0;
+    }
+
+
+    /* =========================
+       EDUCATION
+       ========================= */
+
+    .education-card {
+        width: 100%;
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        gap: 20px;
+    }
+
+    .education-card h3 {
+        font-size: 18px;
+    }
+
+    .education-school {
+        font-size: 13px;
+    }
+
+    .education-details {
+        align-items: flex-start;
+
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       RESUME
+       ========================= */
+
+    .resume-container {
+        width: 100%;
+    }
+
+    .resume-container h2 {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    .resume-container > p:not(.section-label) {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .resume-buttons {
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 10px;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+
+        padding: 12px 18px;
+    }
+
+
+    /* =========================
+       CONTACT
+       ========================= */
+
+    .contact-container {
+        width: 100%;
+    }
+
+    .contact-container h2 {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    .contact-container > p:not(.section-label) {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .contact-links {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    /* =========================
+       CASE STUDY HERO
+       ========================= */
+
+    .case-study-hero {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 70px 18px 30px;
+
+        margin: 0;
+    }
+
+    .case-study-hero h1 {
+        font-size: clamp(40px, 13vw, 58px);
+
+        line-height: 0.98;
+
+        letter-spacing: -2px;
+
+        margin: 12px 0;
+    }
+
+    .case-study-subtitle {
+        font-size: 19px;
+
+        line-height: 1.35;
+
+        margin-bottom: 15px;
+    }
+
+    .case-study-intro {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        margin: 18px 0;
+    }
+
+
+    /* =========================
+       CASE STUDY INFO
+       ========================= */
+
+    .project-info {
+        width: calc(100% - 36px);
+
+        margin: 20px auto 50px;
+
+        padding: 20px 0;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .project-info-item span {
+        font-size: 9px;
+    }
+
+    .project-info-item strong {
+        font-size: 12px;
+
+        line-height: 1.4;
+    }
+
+
+    /* =========================
+       CASE STUDY CONTENT
+       ========================= */
+
+    .case-study-content {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 0 18px;
+    }
+
+    .case-study-section {
+        width: 100%;
+
+        margin-bottom: 60px;
+    }
+
+    .case-study-section h2 {
+        font-size: 28px;
+
+        line-height: 1.2;
+
+        margin-bottom: 15px;
+    }
+
+    .case-study-section > p {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    /* =========================
+       CASE STUDY MAIN IMAGE
+       ========================= */
+
+    .case-study-image {
+        width: calc(100% - 36px);
+
+        max-width: none;
+
+        height: auto;
+
+        min-height: 300px;
+
+        margin: 20px auto 60px;
+
+        border-radius: 14px;
+    }
+
+    .case-study-image img {
+        width: 100%;
+        height: auto;
+
+        max-width: 100%;
+
+        object-fit: contain;
+    }
+
+
+    /* =========================
+       FEATURE CARDS
+       ========================= */
+
+    .feature-grid {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+
+    .feature-card h3 {
+        font-size: 17px;
+    }
+
+    .feature-card p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    /* =========================
+       TECH STACK
+       ========================= */
+
+    .tech-stack {
+        gap: 6px;
+
+        margin-top: 15px;
+    }
+
+    .tech-stack span {
+        padding: 6px 9px;
+
+        font-size: 10px;
+    }
+
+    .tech-stack.large {
+        gap: 7px;
+    }
+
+    .tech-stack.large span {
+        padding: 7px 10px;
+
+        font-size: 10px;
+    }
+
+
+/* =========================
+   SCREENSHOTS CASE STUDY
+   ========================= */
+
+.screenshot-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+}
+
+.screenshot-item {
+    text-align: center;
+}
+
+.screenshot-item img {
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: contain;
+
+    background: #101010;
+
+    border-radius: 15px;
+
+    padding: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.screenshot-item img:hover {
+    transform: translateY(-5px);
+}
+
+.screenshot-item p {
+    color: #888;
+
+    font-size: 13px;
+
+    margin-top: 12px;
+}
+
+    /* =========================
+       DESIGN PROCESS
+       ========================= */
+
+    .process-grid {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        margin-top: 25px;
+    }
+
+    .process-card {
+        padding: 20px;
+    }
+
+    .process-card h3 {
+        font-size: 28px;
+    }
+
+    .process-card h4 {
+        font-size: 18px;
+
+        margin: 10px 0;
+    }
+
+    .process-card p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =========================
+       EVALUATION
+       ========================= */
+
+    .evaluation-grid {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        margin-top: 25px;
+    }
+
+    .evaluation-card {
+        padding: 22px;
+    }
+
+    .evaluation-card h3 {
+        font-size: 38px;
+    }
+
+
+    /* =========================
+       ROLE LIST
+       ========================= */
+
+    .role-list {
+        padding-left: 18px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+    .role-list li {
+        margin-bottom: 9px;
+    }
+
+
+    /* =========================
+       BACK TO PROJECTS
+       ========================= */
+
+    .back-projects {
+        padding: 40px 18px;
+    }
+
+}
